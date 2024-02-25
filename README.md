@@ -4,12 +4,12 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 --------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
     Title = "Kenyou Hub",
-    SubTitle = "by kenyou.exe",
+    SubTitle = "by Kenyou Hub",
     TabWidth = 160,
-    Size = UDim2.fromOffset(500, 350),
-    Acrylic = true, 
+    Size = UDim2.fromOffset(450, 300),
+    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
     Theme = "Darker",
-    MinimizeKey = Enum.KeyCode.End 
+    MinimizeKey = Enum.KeyCode.End -- Used when theres no MinimizeKeybind
 })
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "home" }),
@@ -75,7 +75,7 @@ elseif placeId == 7449423635 then
 Third_Sea = true
 end
 
---// Check Quest
+--// Check Quest  
 function CheckLevel()
 local Lv = game:GetService("Players").LocalPlayer.Data.Level.Value
 if First_Sea then
@@ -2156,6 +2156,9 @@ end
 
 -----Click
 
+function Click()
+	if not _G.FastAttack then
+		
 FastAttackSpeed = true
 
 _G.Fast_Delay = 0.5
