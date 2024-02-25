@@ -2155,10 +2155,8 @@ return 0
 end
 
 -----Click
-
 function Click()
 	if not _G.FastAttack then
-		
 FastAttackSpeed = true
 
 _G.Fast_Delay = 0.5
